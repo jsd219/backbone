@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Backbone Class : Routers</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/styles.css">
+
+        <style>
+            ul {
+                list-style: none;
+            }
+            ul li {
+                margin-bottom: 10px;
+                cursor: pointer;
+            }
+        </style>
+
+        <script src="js/lib/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+    	<nav id="nav">
+    		<ul>
+    			<li data-url="">Home</li>
+    			<li data-url="cars">Cars</li>
+    			<li data-url="boats">Boats</li>
+    		</ul>
+		</nav>
+    	<div id="container">
+    		<ul id="vehicleList"></ul>
+        </div>
+        
+        <script src="js/lib/jquery-min.js"></script>
+        <script src="js/lib/underscore-min.js"></script>
+        <script src="js/lib/backbone-min.js"></script>
+
+        <script id="vehiclesTemplate" type="text/html">
+        <%= regNum %>
+        <button class="delete">Delete</button>
+        </script>
+     
+        <script src="js/main.routers.js"></script>
+    </body>
+</html>
