@@ -68,7 +68,7 @@ var HomeView = Backbone.View.extend({
 	tagName: "li",
 
 	render: function() {
-		this.$('#vehicleList').append("This is the home page");
+		this.$("#vehicleList").html("This is the home page");
 
 		return this;
 	}
@@ -99,6 +99,7 @@ var AppRouter = Backbone.Router.extend({
 	viewHome: function() {
 		var view = new HomeView({ el: "#container" });
 		view.render();
+		//$("#vehicleList").html("this is home view");
 	},
 
 	viewCars: function() {
@@ -125,6 +126,7 @@ var NavView = Backbone.View.extend({
 	},
 
 	onClick: function(e){
+		$("#vehicleList").html("");
 		var $li = $(e.target);
 		router.navigate($li.attr("data-url"), { trigger: true });
 	}
