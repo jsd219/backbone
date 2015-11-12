@@ -64,8 +64,11 @@ var VehiclesView = Backbone.View.extend({
 });
 
 var HomeView = Backbone.View.extend({
+
+	tagName: "li",
+
 	render: function() {
-		this.$el.html("<h1>This is the home page</h1>");
+		this.$('#vehicleList').append("This is the home page");
 
 		return this;
 	}
