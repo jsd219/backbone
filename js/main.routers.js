@@ -99,7 +99,6 @@ var AppRouter = Backbone.Router.extend({
 	viewHome: function() {
 		var view = new HomeView({ el: "#container" });
 		view.render();
-		//$("#vehicleList").html("this is home view");
 	},
 
 	viewCars: function() {
