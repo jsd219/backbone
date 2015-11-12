@@ -75,17 +75,17 @@ var HomeView = Backbone.View.extend({
 });
 
 var cars = new Cars([
-	new Car({ 'regNum': '1234', 'color': 'red' }),
-	new Car({ 'regNum': '1434' }),
-	new Car({ 'regNum': '1564' }),
-	new Car({ 'regNum': '1247' }),
+	new Car({ 'title': 'Car1', 'regNum': '1234', 'color': 'red' }),
+	new Car({ 'title': 'Car2', 'regNum': '1434' }),
+	new Car({ 'title': 'Car3', 'regNum': '1564' }),
+	new Car({ 'title': 'Car4', 'regNum': '1247' }),
 ]);
 
 var boats = new Boats([
-	new Boat({ 'regNum': 'b1234', 'color' : 'blue' }),
-	new Boat({ 'regNum': 'b1434' }),
-	new Boat({ 'regNum': 'b1564' }),
-	new Boat({ 'regNum': 'b1247' }),
+	new Boat({ 'title': 'Boat1', 'regNum': 'b1234', 'color' : 'blue' }),
+	new Boat({ 'title': 'Boat2', 'regNum': 'b1434' }),
+	new Boat({ 'title': 'Boat3', 'regNum': 'b1564' }),
+	new Boat({ 'title': 'Boat4', 'regNum': 'b1247' }),
 ]);
 
 var AppRouter = Backbone.Router.extend({
