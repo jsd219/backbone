@@ -58,20 +58,21 @@ var VehiclesView = Backbone.View.extend({
 
 		this.model.each(function(vehicle){
 			var vehicleView = new VehicleView({ model: vehicle });
-			self.$('#vehicleList').append(vehicleView.render().$el);
+			self.$el.append(vehicleView.render().$el);
 		});
+
+		return this;
 	} 
 });
 
 var HomeView = Backbone.View.extend({
 
-	tagName: "li",
-
 	render: function() {
-		this.$("#vehicleList").html("This is the home page");
+		this.$el.html("This is the home page");
 
 		return this;
 	}
+
 });
 
 var cars = new Cars([
@@ -116,10 +117,6 @@ var AppRouter = Backbone.Router.extend({
 	},
 
 	loadView: function(newView) {
-		
-		if(this.currentView)
-		this.currentView.remove();
-		
 		$("#container").html(newView.render().$el);
 	}
 });
